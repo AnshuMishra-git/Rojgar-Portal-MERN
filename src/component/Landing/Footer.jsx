@@ -3,12 +3,10 @@ import React, { Fragment } from 'react'
 
 export default function Footer() {
     return (
-        <Fragment>
-                Developer Info-
-                FaceBook
-                Youtube
-                Twitter
-            
-        </Fragment>
+        <>
+            <h1>
+                This is Footer
+            </h1>
+        </>
     )
 }

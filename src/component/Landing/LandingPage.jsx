@@ -6,7 +6,8 @@ import job1 from "../../assets/image/Job1.jpg"
 import job2 from "../../assets/image/Job2.webp"
 import job3 from "../../assets/image/Job3.jpg"
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
-
+import { Map, GoogleApiWrapper } from 'google-maps-react'
+import { useGoogleMaps } from "react-hook-google-maps";
 export default function LandingPage() {
 
     const [index, setIndex] = useState(0);
@@ -14,6 +15,11 @@ export default function LandingPage() {
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };
+    const mapStyles = {
+        width: '100%',
+        height: '100%',
+    };
+
 
     return (
         <>
@@ -60,14 +66,38 @@ export default function LandingPage() {
             <div className="container mt-3">
                 <Jumbotron>
                     <h1>We Are Here <LocationOnOutlinedIcon /></h1>
-                    <p>
-                        Sanskriti Homes, C-282, behind Preeti Sharma Hospital, C Block, Pocket C, Sector 19, Noida, Uttar Pradesh 201301
-                    </p>
+                    <h4>
+                        Sector 19, Noida, Uttar Pradesh 201301
+                    </h4>
                     <p>
                         <Button variant="primary">Contact Us</Button>
                     </p>
                 </Jumbotron>
-            </div>
+                {/* <div style="width: 100%"> */}
+                <iframe
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    scrolling="no"
+                    marginHeight="0"
+                    marginWidth="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Noida%20+(Anshu%20Mishra%20)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                </iframe>
+                <a href="https://www.mapsdirections.info/en/measure-map-radius/">
+                    Map radius measure</a></div>
+
+            {/* </div> */}
+            {/* <iframe
+                width="100%"
+                height="600"
+                src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=21064%20RED%20FIR%20COURT%2C%20CUPERTINO%20-%2095014+(Online%20Virtual%20tax)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight="0"
+                marginWidth="0"
+            >
+                <a href="https://www.maps.ie/coordinates.html">find my coordinates</a>
+            </iframe> */}
         </>
     )
 }

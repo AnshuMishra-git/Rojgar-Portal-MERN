@@ -8,6 +8,7 @@ import job3 from "../../assets/image/Job3.jpg"
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import { Map, GoogleApiWrapper } from 'google-maps-react'
 import { useGoogleMaps } from "react-hook-google-maps";
+import Footer from './Footer';
 export default function LandingPage() {
 
     const [index, setIndex] = useState(0);
@@ -98,6 +99,7 @@ export default function LandingPage() {
             >
                 <a href="https://www.maps.ie/coordinates.html">find my coordinates</a>
             </iframe> */}
+            <Footer />
         </>
     )
 }

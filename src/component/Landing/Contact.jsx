@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from './Navigation'
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBBtn, MDBInput } from "mdbreact";
 import { MDBIcon } from "mdbreact";
+import Footer from './Footer';
 
 export default function Contact() {
     return (
@@ -140,6 +141,7 @@ export default function Contact() {
                     </MDBCol>
                 </MDBRow>
             </section>
+            <Footer />
         </>
     )
 }

@@ -1,12 +1,26 @@
 import React from 'react'
 import Navigation from './Navigation'
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBInput } from "mdbreact";
+import Card from "react-bootstrap/Card";
+import pic from '../../assets/image/me.jpg'
+import Footer from './Footer';
 
 
 export default function About() {
+
     return (
         <>
             <Navigation />
+            <Card className="bg-dark text-white">
+                <Card.Img src={pic} alt="Card image" height="700px" />
+                <Card.ImgOverlay>
+                    <Card.Title className="text-primary" style={{ fontSize: "50px" }}>About Me</Card.Title>
+                    <Card.Text className="text-dark" style={{ fontSize: "30px" }}>
+                        I am a Pasinate Software Engineer Working as MERN &#38; MEAN Stack
+    </Card.Text>
+                    <Card.Text className="text-muted">Last Updated {new Date().getMinutes()} Minute Ago </Card.Text>
+                </Card.ImgOverlay>
+            </Card>
             <section className="contact-section my-5">
                 <MDBCard>
                     <MDBRow>
@@ -14,7 +28,7 @@ export default function About() {
                             <MDBCardBody className="form">
                                 <h3 className="mt-4">
                                     <MDBIcon icon="envelope" className="pr-2" />
-                Write to us:
+                Write to Me:
               </h3>
                                 <MDBRow>
                                     <MDBCol md="6">
@@ -117,6 +131,7 @@ export default function About() {
                     </MDBRow>
                 </MDBCard>
             </section>
+            <Footer />
         </>
     )
 }

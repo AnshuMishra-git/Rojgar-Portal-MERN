@@ -37,8 +37,8 @@ export default function Navigation() {
                             <SupervisedUserCircleOutlinedIcon />About Us</Nav.Link>
                     </Nav>
                     <Form inline>
-                        <Button className="m-1" variant="outline-success">Sign In</Button>{' '}
-                        <Button className="m-1" variant="outline-primary">Register</Button>
+                        <Button as={Link} to="/signin" className="m-1" variant="outline-success">Sign In</Button>{' '}
+                        <Button as={Link} to="/signup" className="m-1" variant="outline-primary">Register</Button>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
